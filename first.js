@@ -3,7 +3,7 @@ let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
-
+const resetBtn = document.querySelector('#reset');
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 
@@ -46,7 +46,7 @@ const playGame = (userChoice) => {
         if(userChoice === "rock") {
             //scissors, paper
             userWin = compChoice === "paper" ? false : true;
-        } else if (userChoice === paper) {
+        } else if (userChoice === "paper") {
             //rock, scissors
             userWin = compChoice === "scissors" ? false : true;
         } else {
@@ -64,3 +64,14 @@ choices.forEach((choice) => {
         playGame(userChoice);
     });
 });
+
+resetBtn.addEventListener("click", () => {
+    userScore = 0;
+    compScore = 0;
+
+    userScorePara.innerText = userScore;
+    compScorePara.innerText = compScore;
+
+    msg.innerText = "Play your move";
+    msg.style.backgroundColor = '#081b31';
+})

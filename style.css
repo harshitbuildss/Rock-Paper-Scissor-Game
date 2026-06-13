@@ -13,13 +13,20 @@ h1 {
 }
 
 .choice {
-    height: 165px;
-    width:165px;
+    height: 155px;
+    width:155px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    cursor: pointer;
 } 
+
+.choice:active {
+    transform: scale(0.92); 
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 .choice:hover {
     background-color: #081b31;
@@ -56,7 +63,7 @@ img {
 }
 
 .msg-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #msg {
@@ -64,6 +71,36 @@ img {
     color: white;
     font-size: 2rem;
     display: inline;
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: 0.9rem;
+    border-radius: 40rem;
+}
+
+#reset {
+    margin-top: 3rem;
+    padding: 0.9rem 1.8rem;
+    font-size: 1.5rem;
+    background-color: #081b31;
+    color: white;
+    border: none;
+    border-radius: 40rem;
+    cursor: pointer;
+}
+
+body {
+    background-image: url("photooo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background still if things scroll */
+}
+
+
+#reset {
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    cursor: pointer;
+}
+
+#reset:active {
+    transform: scale(0.92);
+    background-color: #0b132b; 
 }
