@@ -8,6 +8,7 @@ A simple Rock Paper Scissors game built using HTML, CSS, and JavaScript.
 - Random computer moves
 - Responsive design
 - Instant win/lose/draw results
+- Reset score button
 
 ## Tech Stack
 - HTML
